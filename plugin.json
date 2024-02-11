@@ -1,0 +1,15 @@
+{
+    "id": "battlemetrics",
+    "name": "Battlemetrics",
+    "description": "Plugin to integrate Battlemetrics into Azuriom",
+    "version": "0.0.1",
+    "url": "https://discord.com/users/268671832348033024",
+    "authors": [
+        "illuminatixs"
+    ],
+    "azuriom_api": "1.1.0",
+    "providers": [
+        "\\Azuriom\\Plugin\\Battlemetrics\\Providers\\BattlemetricsServiceProvider",
+        "\\Azuriom\\Plugin\\Battlemetrics\\Providers\\RouteServiceProvider"
+    ]
+}
