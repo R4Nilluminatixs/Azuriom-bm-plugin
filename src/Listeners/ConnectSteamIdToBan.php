@@ -34,6 +34,3 @@ class ConnectSteamIdToBan implements ShouldQueue
         $event->ban->save();
     }
 }
-
-    }
-}

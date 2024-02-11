@@ -62,14 +62,3 @@ final class ApiClient implements ApiClientInterface
         return $this->client->request($httpMethod, $url, $requestOptions);
     }
 }
- $this->client->request($httpMethod, $url, $requestOptions);
-    }
-}
-        }
-
-        return $this->client->request($httpMethod, $url, $requestOptions);
-    }
-}
-$this->client->request($httpMethod, $url, $requestOptions);
-    }
-}

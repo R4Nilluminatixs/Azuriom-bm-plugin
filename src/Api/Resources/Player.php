@@ -34,11 +34,3 @@ class Player extends BaseResource implements ApiResourceInterface
         return $self;
     }
 }
-) {
-                $self->steamId = $include['attributes']['identifier'];
-            }
-        }
-
-        return $self;
-    }
-}

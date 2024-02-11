@@ -12,7 +12,5 @@
         "\\Azuriom\\Plugin\\Battlemetrics\\Providers\\BattlemetricsServiceProvider",
         "\\Azuriom\\Plugin\\Battlemetrics\\Providers\\RouteServiceProvider"
     ],
-    "apiId": 69,
-}
-0
+    "apiId": 138
 }
