@@ -57,15 +57,27 @@
             </div>
             <div class="mb-3">
                 <b>{{ trans('battlemetrics::admin.ban.organization_wide') }}:</b>
-                <p>@if ($organization_wide) {{ trans('battlemetrics::admin.ban.yes') }} @else {{ trans('battlemetrics::admin.ban.no') }} @endif</p>
+                <p>@if ($organization_wide)
+                        {{ trans('battlemetrics::admin.ban.yes') }}
+                    @else
+                        {{ trans('battlemetrics::admin.ban.no') }}
+                    @endif</p>
             </div>
             <div class="mb-3">
                 <b>{{ trans('battlemetrics::admin.ban.auto_add_enabled') }}:</b>
-                <p>@if ($auto_add_enabled) {{ trans('battlemetrics::admin.ban.yes') }} @else {{ trans('battlemetrics::admin.ban.no') }} @endif</p>
+                <p>@if ($auto_add_enabled)
+                        {{ trans('battlemetrics::admin.ban.yes') }}
+                    @else
+                        {{ trans('battlemetrics::admin.ban.no') }}
+                    @endif</p>
             </div>
             <div class="mb-3">
                 <b>{{ trans('battlemetrics::admin.ban.native_enabled') }}:</b>
-                <p>@if ($organization_wide) {{ trans('battlemetrics::admin.ban.yes') }} @else {{ trans('battlemetrics::admin.ban.no') }} @endif</p>
+                <p>@if ($organization_wide)
+                        {{ trans('battlemetrics::admin.ban.yes') }}
+                    @else
+                        {{ trans('battlemetrics::admin.ban.no') }}
+                    @endif</p>
             </div>
             <div class="mb-3">
                 <b>{{ trans('battlemetrics::admin.ban.last_sync') }}:</b>
@@ -77,16 +89,9 @@
     </div>
     <div class="row">
         <div class="text-right mb-2">
-            <a class="btn btn-primary" href="https://www.battlemetrics.com/rcon/bans/edit/{{ $battlemetrics_id }}" role="button" target="_blank">
+            <a class="btn btn-primary" href="https://www.battlemetrics.com/rcon/bans/edit/{{ $battlemetrics_id }}"
+               role="button" target="_blank">
                 {{ trans('battlemetrics::admin.ban.links.ban') }}
-            </a>
-            <a class="btn btn-success" href="{{ route('battlemetrics.admin.bans.sync', ['ban' => $id]) }}" role="button">
-                {{ trans('battlemetrics::admin.ban.links.ban_sync') }}
-            </a>
-        </div>
-    </div>
-@endsection
-inks.ban') }}
             </a>
             <a class="btn btn-success" href="{{ route('battlemetrics.admin.bans.sync', ['ban' => $id]) }}"
                role="button">
