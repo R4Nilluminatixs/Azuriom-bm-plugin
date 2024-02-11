@@ -45,6 +45,8 @@ return [
         'auto_add_enabled' => 'Will new bans be automatically added?',
         'native_enabled' => 'Is ban native?',
         'no_connected_user' => 'No connected user found in system',
+        'yes' => 'Yes',
+        'no' => 'No',
         'links' => [
             'ban' => 'View ban on BattleMetrics',
             'ban_sync' => '(Re-)sync this ban',
@@ -52,11 +54,6 @@ return [
         ],
         'messages' => [
             'synced_success' => 'Ban sync was successfully requested!',
-        ],
-    ],
-];
-
-ccessfully requested!',
         ],
     ],
 ];
