@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace Azuriom\Plugin\Battlemetrics\Controllers;
 
@@ -34,10 +35,6 @@ class BattlemetricsHomeController extends Controller
 
         return view('battlemetrics::index', [
             'bans' => $bans,
-        ]);
-    }
-}
-ans,
         ]);
     }
 }
