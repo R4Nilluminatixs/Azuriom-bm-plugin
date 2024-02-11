@@ -58,7 +58,7 @@
                         @if ($ban->expires_at !== null)
                             {{ $ban->expires_at }}
                         @else
-                            {{ trans('battlemetrics.admin.bans.permanently_banned') }}
+                            {{ trans('battlemetrics::admin.bans.permanent_ban') }}
                         @endif
                     </td>
                     <td>
