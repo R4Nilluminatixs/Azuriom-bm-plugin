@@ -103,25 +103,4 @@ class BMBan extends Model
             ->orWhereNull('expires_at')
             ->count('id');
     }
-
-    public static function createFromApiResource(Ban $ban): self
-    {
-        $newRecord = new self();
-        $newRecord->user_id = (User::query()->where('game_id', $ban->steam_id)->first(['id']))?->id ?? null;
-        $newRecord->organization_id = $ban->organization_id;
-        $newRecord->battlemetrics_id = $ban->battlemetrics_id;
-        $newRecord->steam_id = $ban->steam_id;
-        $newRecord->timestamp = $ban->timestamp;
-        $newRecord->reason = $ban->reason;
-        $newRecord->note = $ban->note;
-        $newRecord->expires_at = $ban->expires_at;
-        $newRecord->identifiers = $ban->identifiers;
-        $newRecord->organization_wide = $ban->organization_wide;
-        $newRecord->auto_add_enabled = $ban->auto_add_enabled;
-        $newRecord->native_enabled = $ban->nativeEnabled;
-        $newRecord->last_sync = new DateTime();
-        $newRecord->save();
-
-        return $newRecord;
-    }
 }
