@@ -26,9 +26,15 @@ class ConnectSteamIdToBan implements ShouldQueue
             return;
         }
 
+        $battleMetricsUserId = $event->ban->battlemetrics_user_id ? (string) $event->ban->battlemetrics_user_id : null;
+
         $playersEndpoint = new Players($this->client);
         /** @var Player $result */
-        $result = $playersEndpoint->get($event->ban->battlemetrics_user_id, ['include' => 'identifier']);
+        $result = $playersEndpoint->get($battleMetricsUserId, ['include' => 'identifier']);
+
+        if ($result->steamId === null) {
+            return; // Couldn't find a steam ID connected to the ban..
+        }
 
         $event->ban->steam_id = $result->steamId;
         $event->ban->save();
