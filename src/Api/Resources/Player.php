@@ -13,7 +13,7 @@ class Player extends BaseResource implements ApiResourceInterface
 
     public string $name;
 
-    public string $steamId;
+    public ?string $steamId = null;
 
     public array $organizations;
 
@@ -23,7 +23,11 @@ class Player extends BaseResource implements ApiResourceInterface
         $self->id = $data['data']['id'];
         $self->type = $data['data']['type'];
         $self->name = $data['data']['attributes']['name'];
-        $self->organizations = $data['data']['relationships']['organizations']['data'];
+
+        $self->organizations = [];
+        if (array_key_exists('organizations', $data['data']['relationships'])) {
+            $self->organizations = $data['data']['relationships']['organizations']['data'];
+        }
 
         foreach ($data['included'] as $include) {
             if ($include['attributes']['type'] === 'steamID') {
